@@ -12,8 +12,10 @@ from info import BOT_TOKEN
 from OMDB import get_movie_info
 #=======================================================================
 
-startbuttons=[[InlineKeyboardButton('🔍 Find Me The Movie', switch_inline_query_current_chat='')]]
-        await message.reply_text(text="Hai, \nI'm a Simple Telegram Bot To Get Movie Info Using IMDB\n \nSend Me The Movie Name To Get Info About It..", reply_markup=InlineKeyboardMarkup(startbuttons))
+START_MSG = f"𝖧𝖺𝗂, \n𝖨'𝗆 𝖺 𝖲𝗂𝗆𝗉𝗅𝖾 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖡𝗈𝗍 𝖳𝗈 𝖦𝖾𝗍 𝖬𝗈𝗏𝗂𝖾 𝖨𝗇𝖿𝗈 𝖴𝗌𝗂𝗇𝗀 𝖮𝖬𝖣𝖻\n \n𝖲𝖾𝗇𝖽 𝖬𝖾 𝖳𝗁𝖾 𝖬𝗈𝗏𝗂𝖾 𝖭𝖺𝗆𝖾 𝖳𝗈 𝖦𝖾𝗍 𝖨𝗇𝖿𝗈 𝖠𝖻𝗈𝗎𝗍 𝖨𝗍"
+
+STICKER = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
+
 #=======================================================================
 
 Sam = Client(
@@ -28,9 +30,9 @@ print("Starting Bot..")
 #=======================================================================
 
 @Sam.on_message(filters.command(['start']) & filters.private)
-def start(client, message):
-startbuttons=[[InlineKeyboardButton('🔍 Find Me The Movie', switch_inline_query_current_chat='')]]
-        await message.reply_text(text="Hai, \nI'm a Simple Telegram Bot To Get Movie Info Using IMDB\n \nSend Me The Movie Name To Get Info About It..", reply_markup=InlineKeyboardMarkup(startbuttons))
+def start(client, cmd):
+         cmd.reply_sticker(STICKER)
+         cmd.reply_text(START_MSG)
                
 @Sam.on_message(filters.text)
 async def imdbcmd(client, message):
