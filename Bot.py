@@ -34,7 +34,7 @@ print("Starting Bot..")
 
 @Sam.on_message(filters.command(['start']) & filters.private)
 def start(client, cmd):
-         cmd.reply_button(buttons)
+         cmd.button(buttons)
          cmd.reply_text(START_MSG)
                
 @Sam.on_message(filters.text)
