@@ -43,7 +43,7 @@ async def imdbcmd(client, message):
                   urlid = movie_info['imdb_id']
                   buttons=[[InlineKeyboardButton('🎟 𝖨𝖬𝖣𝖻', url=f"https://www.imdb.com/title/{urlid}")]] 
                                                      
-                  text=f"""📀 𝖳𝗂𝗍𝗅𝖾 : <b>{movie_info['title']}</b>
+                  text=f""𝖳𝗂𝗍𝗅𝖾 : <b>{movie_info['title']}</b>
                             
 ⏱️ Runtime : <b>{movie_info['duration']}</b>
 🌟 Rating : <b>{movie_info['imdb_rating']}/10</b>
