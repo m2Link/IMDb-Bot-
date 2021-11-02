@@ -14,7 +14,10 @@ from OMDB import get_movie_info
 
 START_MSG = f"𝖧𝖺𝗂, \n𝖨'𝗆 𝖺 𝖲𝗂𝗆𝗉𝗅𝖾 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖡𝗈𝗍 𝖳𝗈 𝖦𝖾𝗍 𝖬𝗈𝗏𝗂𝖾 𝖨𝗇𝖿𝗈 𝖴𝗌𝗂𝗇𝗀 𝖮𝖬𝖣𝖻\n \n𝖲𝖾𝗇𝖽 𝖬𝖾 𝖳𝗁𝖾 𝖬𝗈𝗏𝗂𝖾 𝖭𝖺𝗆𝖾 𝖳𝗈 𝖦𝖾𝗍 𝖨𝗇𝖿𝗈 𝖠𝖻𝗈𝗎𝗍 𝖨𝗍"
 
-STICKER = 'CAACAgUAAxkDAALjS2F9dI-C4OaXKkSgsAxjX1mkofkKAAJXBAAC6aXoV2X6ud6KqXzUHgQ'  
+buttons = [  
+       [InlineKeyboardButton('🔍 SEARCH Movies', switch_inline_query_current_chat='')],
+       [InlineKeyboardButton('BOT Updates CHANNEL', url='https://t.me/joinchat/DF3QnU6_VexmZGJl')],
+          ]
 
 #=======================================================================
 
