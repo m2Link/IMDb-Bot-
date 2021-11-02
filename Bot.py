@@ -10,6 +10,7 @@ from info import API_ID
 from info import API_HASH
 from info import BOT_TOKEN
 from OMDB import get_movie_info
+#=======================================================================
 
 Sam = Client(
     session_name="OMDb-Bot",
